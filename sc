@@ -46,31 +46,6 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-#if [ "$1" = $JERICO_SC ]
-#then
-#  DEST=$JERICO_PATH
-#fi
-
-#if [ "$1" = $DOOMSDAY_SC ]
-#then
-#  DEST=$DOOMDAY_PATH
-#fi
-
-#if [ "$1" = $JIS_SC ]
-#then
-#  DEST=$JIS_PATH
-#fi
-
-#if [ "$1" = $HEIMDALL_SC ]
-#then
-#  DEST=$HEIMDALL_PATH
-#fi
-
-#if [ "$1" = $INFRA_SC ]
-#then
-#  DEST=$INFRA_PATH
-#fi
-
 if [ -n "$DEST" ]
 then
   cd $DEST
