@@ -6,3 +6,7 @@
 -- Configuraçao
 
 - Edite o arquivo {path do project_sc}/sc alterando as variaveis *_PATH com o caminho dos projetos
+
+-- Como utilizar
+
+- $ sc [tab]
