@@ -5,7 +5,16 @@
 
 -- Configuraçao
 
-- Edite o arquivo {path do project_sc}/sc alterando as variaveis *_PATH com o caminho dos projetos
+- Crie ou edite o arquivo `~/cloudficacao.conf` configurando as seguintes variaveis com o caminho dos projetos:
+
+Exemplo:
+```
+JIS_ROOT_DIR="/var/www/cloudficacao-jis"
+JERICO_ROOT_DIR="/var/www/cloudficacao"
+DOOMSDAY_ROOT_DIR="/var/www/doomsday"
+HEIMDALL_ROOT_DIR="/var/www/cloudficacao-heimdall"
+INFRA_ROOT_DIR="/var/www/cloudficacao-infra"
+```
 
 -- Como utilizar
 

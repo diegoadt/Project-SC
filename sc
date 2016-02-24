@@ -1,20 +1,13 @@
-#!/bin/bash
+#!/bin/bash -l
 DEST=""
 
+source ~/.cloudficacao.conf
+
 JERICO_SC="jerico"
-JERICO_PATH="/var/ruby/jerico"
-
 DOOMSDAY_SC="doomsday"
-DOOMSDAY_PATH="/var/ruby/doomsday"
-
 JIS_SC="jis"
-JIS_PATH="/var/ruby/cloudficacao-jis"
-
 HEIMDALL_SC="heimdall"
-HEIMDALL_PATH="/var/ruby/cloudficacao-heimdall"
-
 INFRA_SC="infra"
-INFRA_PATH="/var/ruby/cloudficacao-infra"
 
 options="$JERICO_SC $JIS_SC $DOOMSDAY_SC $HEIMDALL_SC $INFRA_SC" 
 
@@ -22,19 +15,19 @@ while [ $# -gt 0 ]; do
   arg=$1
   case $arg in
     $JERICO_SC)
-      DEST=$JERICO_PATH
+      DEST=$JERICO_ROOT_DIR
     ;;
     $DOOMSDAY_SC)
-      DEST=$DOOMSDAY_PATH
+      DEST=$DOOMSDAY_ROOT_DIR
     ;;
     $JIS_SC)
-      DEST=$JIS_PATH
+      DEST=$JIS_ROOT_DIR
     ;;
     $HEIMDALL_SC)
-      DEST=$HEIMDALL_PATH
+      DEST=$HEIMDALL_ROOT_DIR
     ;;
     $INFRA_SC)
-      DEST=$INFRA_PATH
+      DEST=$INFRA_ROOT_DIR
     ;;
     shortlist)
       echo $options
@@ -49,5 +42,6 @@ done
 if [ -n "$DEST" ]
 then
   cd $DEST
-  exec /bin/bash --login
+  exec $SHELL -l
+ # exec /bin/bash
 fi
